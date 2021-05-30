@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Javascript</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function clickMe(){		 
+		const colors = Array("red","green","yellow","cyan","orange");
+		const randomElement = colors[Math.floor(Math.random() * colors.length)];
+
+		document.body.style.backgroundColor = randomElement;
+	}
+	function initiatedCalculator(){
+
+		//todo: get value of item 1
+		const value1 = document.getElementById("item1").value;
+
+		//todo: get value of item 2
+		const value2 = document.getElementById("item2").value;
+
+		//todo:  call add function
+		const result = "Hello "+value1+", "+value2
+		//add(value1,value2)
+
+		//todo:  display resutl in item 3 
+		document.getElementById("item3").value = result;
+		clickMe();
+		
+		//alert(result);
+	}
+	function add(x,y){
+		const x1 = parseInt(x);
+		const y1 = parseInt(y); 
+		return x1+y1
+		//return x+y
+	}
+</script>
+Firstname
+<input type="type" name="item1"   id="item1"  > <br/><br/>
+
+Lastname
+<input type="type" name="item2" id="item2" > <br/><br/>
+
+Result
+<input type="type" name="item3"  id="item3"> <br/>
+
+	<button onclick="initiatedCalculator()" >GET RESULT</button>
+
+</body>
+</html>
